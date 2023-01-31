@@ -26,6 +26,14 @@ It could run basicaly on anyhing includin the smart fridge (if needed)
 If you have any feedback, please reach out me at kokosove18@gmail.com
 
 
+## Roadmap
+
+- Make whole code bruh
+
+- Add some list of cheats
+
+- Build it for win and linux
+
 ## Authors
 
 - [@xxcosita3czxx](https://www.github.com/xxcosita3cz)

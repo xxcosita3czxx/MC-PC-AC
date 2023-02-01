@@ -1,0 +1,1 @@
+CHEATS = ["wurst", "aristois", "sigma"]

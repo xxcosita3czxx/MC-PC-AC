@@ -54,4 +54,5 @@ def main(auto, files, deleted, reg, logs):
         if sel == "Y" or "y" or "Yes" or "yes":
             print("Start auto checking...")
             auto_check(cheats)
-    
+        else:
+            print ("nothin hapens, try 'mc-pc-ac.py --help' ")

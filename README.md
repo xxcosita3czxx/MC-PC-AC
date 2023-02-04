@@ -10,7 +10,7 @@ Minecraft Computer Anticheat tool for windows and server admins
 
 ## Used By
 
-This project is used by the following companies:
+This project is used by the following sečvers:
 
 - None actually
 

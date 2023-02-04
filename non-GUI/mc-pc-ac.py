@@ -11,7 +11,11 @@ def chck_files(cheats):
 def chck_deleted(cheats):
     if platform.system() == "Linux":
         rbin="~/.local/share/trash"
+    elif platform.system() == "Windows":
         rbin="C:\$Recycle"
+    else:
+        print("mac os not support, this command failing")
+        exit("001")
     names = cheats
     for root, dirs, files in os.walk(rbin):
         for file in files:

@@ -70,7 +70,8 @@ def chck_minecraft(cheats):
     pass
 def chck_logs(cheats):
     pass
-def auto_chck(cheats):
+def auto_chck():
+    cheats = mcpcacconfig.CHEATS
     chck_reg(cheats)
     chck_files(cheats)
     chck_deleted(cheats)
@@ -87,7 +88,7 @@ def auto_chck(cheats):
 @click.option("--logs", is_flag=True, help="Scans logs for any suspicious things")
 def main(auto, files, deleted, reg, logs, minecraft):
     if auto:
-        auto_chck(cheats)
+        auto_chck()
         exit("000")
     elif files:
         chck_files(cheats)

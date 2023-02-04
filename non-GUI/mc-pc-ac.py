@@ -2,13 +2,16 @@ import click
 import time
 import os
 import winreg
+import platform
 import mcpcacconfig
 def chck_reg(cheats):
     pass
 def chck_files(cheats):
     pass
 def chck_deleted(cheats):
-    rbin="C:\$Recycle"
+    if platform.system() == "Linux":
+        rbin="~/.local/share/trash"
+        rbin="C:\$Recycle"
     names = cheats
     for root, dirs, files in os.walk(rbin):
         for file in files:

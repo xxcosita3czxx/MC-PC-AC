@@ -85,3 +85,6 @@ def main(auto, files, deleted, reg, logs):
             auto_check(cheats)
         else:
             print ("nothin hapens, try 'mc-pc-ac.py --help' ")
+
+if __name__ == "__main__":
+    main()

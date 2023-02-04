@@ -7,7 +7,23 @@ import mcpcacconfig
 def chck_reg(cheats):
     pass
 def chck_files(cheats):
-    pass
+    if platform.system() == "Windows":
+        print("Checking ALL files, are you sure? (NOTE: this will take a while, and you should NOT close script)")
+        selone=input("y/n: ")
+        if selone.lower() == "y":
+            if platform.system() == "Windows":
+                names = cheats
+                for root, dirs, files in os.walk("C:/"):
+                    for file in files:
+                        if file in names:
+                            file_path = os.path.join(root, file)
+                            print(f'Found file: {file_path}')
+            elif platform.system() == "Linux":                names = cheats
+                for root, dirs, files in os.walk("/"):
+                    for file in files:
+                        if file in names:
+                            file_path = os.path.join(root, file)
+                            print(f'Found file: {file_path}')
 def chck_deleted(cheats):
     if platform.system() == "Linux":
         rbin="~/.local/share/trash"

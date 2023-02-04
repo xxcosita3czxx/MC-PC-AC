@@ -10,8 +10,10 @@ else:
     print("Non-Windows operating system detected. Not importing registry dependencies!")
 
 def chck_reg(cheats):
+    '''Check in registry (WINDOWS ONLY)'''
     pass
 def chck_files(cheats):
+    '''Will check the whole system drive including .minecraft'''
     if platform.system() == "Windows":
         print("Checking ALL files, are you sure? (NOTE: this will take a while, and you should NOT close script)")
         selone=input("y/n: ")
@@ -57,26 +59,32 @@ def auto_chck(cheats):
 ## Main
 
 @click.command()
-@click.option("--auto", is_flag=True)
-@click.option("--files", is_flag=True)
-@click.option("--deleted", is_flag=True)
-@click.option("--minecraft", is_flag=True)
-@click.option("--reg", is_flag=True)
-@click.option("--logs", is_flag=True)
+@click.option("--auto", is_flag=True, help="Automaticaly checks in the whole system")
+@click.option("--files", is_flag=True, help="Will check the whole system drive including .minecraft")
+@click.option("--deleted", is_flag=True, help="Checks the trash bin")
+@click.option("--minecraft", is_flag=True, help="Deeply check .minecraft folder for files made by cheats")
+@click.option("--reg", is_flag=True, help="Check in registry (WINDOWS ONLY)")
+@click.option("--logs", is_flag=True, help="Scans logs for any suspicious things")
 def main(auto, files, deleted, reg, logs, minecraft):
     cheats = mcpcacconfig.CHEATS
     if auto:
         auto_chck(cheats)
+        exit("000")
     elif files:
         chck_files(cheats)
+        exit("000")
     elif deleted:
         chck_deleted(cheats)
+        exit("000")
     elif reg:
         chck_reg(cheats)
+        exit("000")
     elif logs:
         chck_logs(cheats)
+        exit("000")
     elif minecraft:
         chck_minecraft(cheats)
+        exit("000")
     else:
         print("Nothing Selected, should i start auto checking?")
         sel = input("[Y]es/[N]o >> ")

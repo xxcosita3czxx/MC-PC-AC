@@ -63,7 +63,7 @@ def auto_chck(cheats):
 @click.option("--minecraft", is_flag=True)
 @click.option("--reg", is_flag=True)
 @click.option("--logs", is_flag=True)
-def main(auto, files, deleted, reg, logs):
+def main(auto, files, deleted, reg, logs, minecraftn):
     cheats = mcpcacconfig.CHEATS
     if auto:
         auto_chck(cheats)
@@ -82,9 +82,11 @@ def main(auto, files, deleted, reg, logs):
         sel = input("[Y]es/[N]o >> ")
         if sel == "Y" or "y" or "Yes" or "yes":
             print("Start auto checking...")
-            auto_check(cheats)
-        else:
+            auto_chck(cheats)
+        elif sel == "N" or "n" or "No" or "no":
             print ("nothin hapens, try 'mc-pc-ac.py --help' ")
+        else:
+            print(f"wtf wrong with you, you can choose only yes or no, not {sel}")
 
 if __name__ == "__main__":
     main()

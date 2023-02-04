@@ -85,8 +85,9 @@ def main(auto, files, deleted, reg, logs, minecraft):
             auto_chck(cheats)
         elif sel == "N" or "n" or "No" or "no":
             print ("nothin hapens, try 'mc-pc-ac.py --help' ")
+            exit("002")
         else:
             print(f"wtf wrong with you, you can choose only yes or no, not {sel}")
-
+            exit("003")
 if __name__ == "__main__":
     main()

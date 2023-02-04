@@ -63,7 +63,7 @@ def auto_chck(cheats):
 @click.option("--minecraft", is_flag=True)
 @click.option("--reg", is_flag=True)
 @click.option("--logs", is_flag=True)
-def main(auto, files, deleted, reg, logs, minecraftn):
+def main(auto, files, deleted, reg, logs, minecraft):
     cheats = mcpcacconfig.CHEATS
     if auto:
         auto_chck(cheats)

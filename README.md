@@ -1,12 +1,14 @@
 # MC-PC-AC
 
-Minecraft Computer Anticheat tool for windows and server admins
+Minecraft Computer Anticheat tool for basicaly any system and server admins 
+
+- by cosita3cz#2095
 
 ## Features
 
 - Dark mode only
 - GUI and Non GUI versions
-- Cross platform
+- Cross platform (Not for mac, i will not pay for it)
 
 ## Used By
 

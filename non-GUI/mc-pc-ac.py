@@ -109,10 +109,11 @@ def main(auto, files, deleted, reg, logs, minecraft):
         print("Nothing Selected, should i start auto checking?")
         sel = input("[Y]es/[N]o >> ")
         if sel == "Y" or sel == "y" or sel == "Yes" or sel == "yes":
-            print("Start auto checking...")
-            auto_chck()
+            print("UNSTABLE, USE 'mc-pc-ac --auto' instead")
+            # print("Start auto checking...")
+            # auto_chck()
         elif sel == "N" or sel == "n" or sel == "No" or sell == "no":
-            print ("nothin hapens, try 'mc-pc-ac.py --help' ")
+            print ("nothin hapens, try 'mc-pc-ac --help' ")
             exit("002")
         else:
             print(f"wtf wrong with you, you can choose only yes or no, not {sel}")

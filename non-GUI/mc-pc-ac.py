@@ -3,7 +3,7 @@ import time
 import os
 import platform
 import mcpcacconfig
-
+from colorama import *
 cheats = mcpcacconfig.CHEATS
 
 if platform.system() == "Windows":
@@ -23,18 +23,34 @@ def chck_files(cheats):
         if selone.lower() == "y":
             if platform.system() == "Windows":
                 names = cheats
+                found = []
                 for root, dirs, files in os.walk("C:/"):
+                    print(Fore.RED+f">>3: {root}"+Fore.RESET)
                     for file in files:
-                        if file in names:
+                        print(Fore.RED+f">>#: {file}"+Fore.RESET)
+                        if any(name in file for name in names):
                             file_path = os.path.join(root, file)
-                            print(f'Found file: {file_path}')
+                            print(Fore.GREEN+f'Found file: {file_path}'+Fore.RESET)
+                            found.append(file_path)
+
+                print("Found files:")
+                for file in found:
+                    print(file_path)
             elif platform.system() == "Linux":
+                found = []
                 names = cheats
                 for root, dirs, files in os.walk("/"):
+                    print(Fore.RED+f">>3: {root}"+Fore.RESET)
                     for file in files:
-                        if file in names:
+                        print(Fore.RED+f">>#: {file}"+Fore.RESET)
+                        if any(name in file for name in names):
                             file_path = os.path.join(root, file)
-                            print(f'Found file: {file_path}')
+                            print(Fore.GREEN+f'Found file: {file_path}'+Fore.RESET)
+                            found.append(file_path)
+
+                print("Found files:")
+                for file in found:
+                    print(file_path)
 def chck_deleted(cheats):
     if platform.system() == "Linux":
         rbin="~/.local/share/Tnrash"
@@ -91,10 +107,10 @@ def main(auto, files, deleted, reg, logs, minecraft):
     else:
         print("Nothing Selected, should i start auto checking?")
         sel = input("[Y]es/[N]o >> ")
-        if sel == "Y" or "y" or "Yes" or "yes":
+        if sel == "Y" or sel == "y" or sel == "Yes" or sel == "yes":
             print("Start auto checking...")
             auto_chck(cheats)
-        elif sel == "N" or "n" or "No" or "no":
+        elif sel == "N" or sel == "n" or sel == "No" or sell == "no":
             print ("nothin hapens, try 'mc-pc-ac.py --help' ")
             exit("002")
         else:

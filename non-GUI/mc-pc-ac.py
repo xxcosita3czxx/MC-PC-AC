@@ -4,6 +4,8 @@ import os
 import platform
 import mcpcacconfig
 
+cheats = mcpcacconfig.CHEATS
+
 if platform.system() == "Windows":
     import winreg
 else:
@@ -13,6 +15,7 @@ def chck_reg(cheats):
     '''Check in registry (WINDOWS ONLY)'''
     pass
 def chck_files(cheats):
+    print("Checking whole system")
     '''Will check the whole system drive including .minecraft'''
     if platform.system() == "Windows":
         print("Checking ALL files, are you sure? (NOTE: this will take a while, and you should NOT close script)")
@@ -34,13 +37,14 @@ def chck_files(cheats):
                             print(f'Found file: {file_path}')
 def chck_deleted(cheats):
     if platform.system() == "Linux":
-        rbin="~/.local/share/trash"
+        rbin="~/.local/share/Tnrash"
     elif platform.system() == "Windows":
         rbin="C:\$Recycle"
     else:
         print("mac os not support, this command failing")
         exit("001")
     names = cheats
+    print("checking")
     for root, dirs, files in os.walk(rbin):
         for file in files:
             if file in names:
@@ -66,7 +70,6 @@ def auto_chck(cheats):
 @click.option("--reg", is_flag=True, help="Check in registry (WINDOWS ONLY)")
 @click.option("--logs", is_flag=True, help="Scans logs for any suspicious things")
 def main(auto, files, deleted, reg, logs, minecraft):
-    cheats = mcpcacconfig.CHEATS
     if auto:
         auto_chck(cheats)
         exit("000")

@@ -1,9 +1,14 @@
 import click
 import time
 import os
-import winreg
 import platform
 import mcpcacconfig
+
+if platform.system() == "Windows":
+    import winreg
+else:
+    print("Non-Windows operating system detected. Not importing registry dependencies!")
+
 def chck_reg(cheats):
     pass
 def chck_files(cheats):

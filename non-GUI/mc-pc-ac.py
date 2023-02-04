@@ -80,7 +80,7 @@ def auto_chck():
 ## Main
 
 @click.command()
-@click.option("--auto", is_flag=True, help="Automaticaly checks in the whole system")
+@click.option("--auto", is_flag=True, help="Automaticaly checks in the whole system (Unstable, doesnt really work)")
 @click.option("--files", is_flag=True, help="Will check the whole system drive including .minecraft")
 @click.option("--deleted", is_flag=True, help="Checks the trash bin")
 @click.option("--minecraft", is_flag=True, help="Deeply check .minecraft folder for files made by cheats")
@@ -110,7 +110,7 @@ def main(auto, files, deleted, reg, logs, minecraft):
         sel = input("[Y]es/[N]o >> ")
         if sel == "Y" or sel == "y" or sel == "Yes" or sel == "yes":
             print("Start auto checking...")
-            auto_chck(cheats)
+            auto_chck()
         elif sel == "N" or sel == "n" or sel == "No" or sell == "no":
             print ("nothin hapens, try 'mc-pc-ac.py --help' ")
             exit("002")

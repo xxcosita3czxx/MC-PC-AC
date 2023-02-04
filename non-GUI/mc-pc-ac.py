@@ -18,7 +18,8 @@ def chck_files(cheats):
                         if file in names:
                             file_path = os.path.join(root, file)
                             print(f'Found file: {file_path}')
-            elif platform.system() == "Linux":                names = cheats
+            elif platform.system() == "Linux":
+                names = cheats
                 for root, dirs, files in os.walk("/"):
                     for file in files:
                         if file in names:

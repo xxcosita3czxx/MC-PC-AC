@@ -55,7 +55,7 @@ def chck_files(cheats):
                     print(file_path)
 def chck_deleted(cheats):
     if platform.system() == "Linux":
-        rbin="~/.local/share/Tnrash"
+        rbin="~/.local/share/Trash"
     elif platform.system() == "Windows":
         rbin="C:\$Recycle"
     else:

@@ -13,7 +13,7 @@ Minecraft Computer Anticheat tool for basicaly any system and server admins
 
 ## Used By
 
-This project is used by the following sečvers:
+This project is used (or will be) by the following sečvers:
 
 - [Majnrik](https://discord.gg/cXmraC9VWb)
 

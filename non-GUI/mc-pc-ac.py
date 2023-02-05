@@ -5,6 +5,7 @@ import platform
 import mcpcacconfig
 from colorama import *
 from sys import argv, exit
+import sys
 cheats = mcpcacconfig.CHEATS
 
 if platform.system() == "Windows":

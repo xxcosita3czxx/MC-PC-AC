@@ -55,7 +55,8 @@ def chck_files(cheats):
                     print(file_path)
 def chck_deleted(cheats):
     if platform.system() == "Linux":
-        rbin="~/.local/share/Trash"
+        os.chdir("~")
+        rbin=".local/share/Trash/files"
     elif platform.system() == "Windows":
         rbin="C:\$Recycle"
     else:
@@ -63,7 +64,7 @@ def chck_deleted(cheats):
         sys.exit("001")
     found = []
     names = cheats
-    for root, dirs, files in os.walk("/"):
+    for root, dirs, files in os.walk(rbin):
         print(Fore.RED+f">>3: {root}"+Fore.RESET)
         for file in files:
             print(Fore.RED+f">>#: {file}"+Fore.RESET)

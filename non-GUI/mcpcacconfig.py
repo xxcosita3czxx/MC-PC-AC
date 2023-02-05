@@ -1,8 +1,1 @@
-CHEATS = ["wurst",
-    "aristois",
-    "sigma",
-    "vape",
-    "meteor",
-    "bleachhack",
-    "ares"
-]
+CHEATS = ["wurst", "aristois", "sigma","vape","guguhack"]

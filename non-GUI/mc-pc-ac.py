@@ -58,7 +58,7 @@ def chck_deleted(cheats):
         os.chdir(str(os.environ["HOME"]))
         rbin=".local/share/Trash/files"
     elif platform.system() == "Windows":
-        rbin="C:\$Recycle"
+        rbin="C:/$Recycle"
     else:
         print("mac os not support, this command failing")
         sys.exit("001")

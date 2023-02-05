@@ -1,4 +1,5 @@
 # MC-PC-AC
+`(IMPORTANT: You will need atleast python3.1 to run the script)`
 
 Minecraft Computer Anticheat tool for basicaly any system and server admins 
 

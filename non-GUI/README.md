@@ -5,16 +5,32 @@ Non-gui version of mc-pc-ac
 
 ## Usage/Examples
 
-If you use the script, youcan run this ->
+- Download the script ->
 
-```bash
+```lua
+git clone https://github.com/xxcosita3czxx/mc-pc-ac.git
+```
+
+`(Or use the green download button)`
+
+- Get in the non-gui directory ->
+
+```lua
+cd mc-pc-ac/non-GUI
+```
+
+-Then you can use the script, you can run this ->
+
+```lua
 python3 mc-pc-ac.py --help
 ```
 
-or if you download the build for your system ->
+- or if you download the build for your system ->
 
-```bash
-mc-pc-ac --help
+hit the releases button on right and download latest build for your system
+Then you can use the script
+```lua
+mc-pc-ac(strings about version and arch.) --help
 ```
 
 With Extension ofc (Does not count on Linux)

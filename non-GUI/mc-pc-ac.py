@@ -79,7 +79,15 @@ def chck_deleted(cheats):
 def chck_minecraft(cheats):
     pass
 def chck_logs(cheats):
-    pass
+    print("checking logs...")
+    f = open("log.txt", "r")
+    lines = f.readlines() 
+    for line in lines:
+        if line.find(cheats) != -1:
+            print(line)
+
+# Close the file
+f.close()
 def auto_chck():
     cheats = mcpcacconfig.CHEATS
     chck_reg(cheats)

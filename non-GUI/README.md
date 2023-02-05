@@ -29,7 +29,7 @@ python3 mc-pc-ac.py --help
 
 hit the releases button on right and download latest build for your system
 Then you can use the script
-```lua
+```bash
 mc-pc-ac(strings about version and arch.) --help
 ```
 

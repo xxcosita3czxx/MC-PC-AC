@@ -116,9 +116,9 @@ def main(auto, files, deleted, reg, logs, minecraft):
             # auto_chck()
         elif sel == "N" or sel == "n" or sel == "No" or sell == "no":
             print ("nothin hapens, try 'mc-pc-ac --help' ")
-            exit("002")
+            sys.exit("000")
         else:
             print(f"wtf wrong with you, you can choose only yes or no, not {sel}")
-            exit("003")
+            sys.exit("000")
 if __name__ == "__main__":
     main()

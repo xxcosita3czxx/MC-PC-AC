@@ -15,7 +15,9 @@ Minecraft Computer Anticheat tool for basicaly any system and server admins
 
 This project is used by the following sečvers:
 
-- None actually
+- [Majnrik](https://discord.gg/cXmraC9VWb)
+
+- [TheOver](https://discord.gg/aFEhjJMDN5)
 
 ## Optimizations
 

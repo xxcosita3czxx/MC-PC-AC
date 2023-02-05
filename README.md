@@ -38,3 +38,5 @@ If you have any feedback, please reach out me at kokosove18@gmail.com or on disc
 ## Support
 
 For support, create request on issue page
+
+(Note: if you didnt found something here, you can try checking the [wiki](https://github.com/xxcosita3czxx/mc-pc-ac/wiki) page)

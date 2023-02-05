@@ -85,9 +85,8 @@ def chck_logs(cheats):
     for line in lines:
         if line.find(cheats) != -1:
             print(line)
-
-# Close the file
-f.close()
+    # Close the file
+    f.close()
 def auto_chck():
     cheats = mcpcacconfig.CHEATS
     chck_reg(cheats)

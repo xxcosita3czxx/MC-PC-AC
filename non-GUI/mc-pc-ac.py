@@ -4,6 +4,7 @@ import os
 import platform
 import mcpcacconfig
 from colorama import *
+from sys import argv, exit
 cheats = mcpcacconfig.CHEATS
 
 if platform.system() == "Windows":
@@ -58,7 +59,7 @@ def chck_deleted(cheats):
         rbin="C:\$Recycle"
     else:
         print("mac os not support, this command failing")
-        exit("001")
+        sys.exit("001")
     names = cheats
     print("checking")
     for root, dirs, files in os.walk(rbin):
@@ -89,22 +90,22 @@ def auto_chck():
 def main(auto, files, deleted, reg, logs, minecraft):
     if auto:
         auto_chck()
-        exit("000")
+        sys.exit("000")
     elif files:
         chck_files(cheats)
-        exit("000")
+        sys.exit("000")
     elif deleted:
         chck_deleted(cheats)
-        exit("000")
+        sys.exit("000")
     elif reg:
         chck_reg(cheats)
-        exit("000")
+        sys.exit("000")
     elif logs:
         chck_logs(cheats)
-        exit("000")
+        sys.exit("000")
     elif minecraft:
         chck_minecraft(cheats)
-        exit("000")
+        sys.exit("000")
     else:
         print("Nothing Selected, should i start auto checking?")
         sel = input("[Y]es/[N]o >> ")

@@ -21,7 +21,7 @@ def chck_files(cheats):
     '''Will check the whole system drive including .minecraft'''
     if platform.system() == "Windows":
         print("Checking ALL files, are you sure? (NOTE: this will take a while, and you should NOT close script)")
-        selone=input("y/n: ")
+        selone=input("[Y]es/[N]o >> ")
         if selone.lower() == "y":
             if platform.system() == "Windows":
                 names = cheats
@@ -61,13 +61,20 @@ def chck_deleted(cheats):
     else:
         print("mac os not support, this command failing")
         sys.exit("001")
+    found = []
     names = cheats
-    print("checking")
-    for root, dirs, files in os.walk(rbin):
+    for root, dirs, files in os.walk("/"):
+        print(Fore.RED+f">>3: {root}"+Fore.RESET)
         for file in files:
-            if file in names:
+            print(Fore.RED+f">>#: {file}"+Fore.RESET)
+            if any(name in file for name in names):
                 file_path = os.path.join(root, file)
-                print(f'Found file: {file_path}')
+                print(Fore.GREEN+f'Found file: {file_path}'+Fore.RESET)
+                found.append(file_path)
+
+    print("Found files:")
+    for file in found:
+        print(file_path)
 def chck_minecraft(cheats):
     pass
 def chck_logs(cheats):

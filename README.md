@@ -23,15 +23,13 @@ It could run basicaly on anyhing includin the smart fridge (if needed)
 
 ## Feedback
 
-If you have any feedback, please reach out me at kokosove18@gmail.com
+If you have any feedback, please reach out me at kokosove18@gmail.com or on discord: cosita3cz#2095
 
 ## Roadmap
 
-- Make whole code bruh
-
-- Add some list of cheats
-
 - Build it for win and linux
+
+- Add registry check, minecraft deep check and fix the auto check
 
 ## Authors
 

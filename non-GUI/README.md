@@ -18,8 +18,13 @@ git clone https://github.com/xxcosita3czxx/mc-pc-ac.git
 ```lua
 cd mc-pc-ac/non-GUI
 ```
+- Install requirements ->
 
--Then you can use the script, you can run this ->
+```lua
+pip install -r reqs.txt
+```
+
+- Then you can use the script, you can run this ->
 
 ```lua
 python3 mc-pc-ac.py --help

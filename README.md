@@ -1,7 +1,7 @@
 # MC-PC-AC
 `(IMPORTANT: You will need atleast python3.1 to build the script manually)`
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/xxcosita3czxx/mc-pc-ac/python-package.yml?label=pytests&logo=python&style=for-the-badge)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/xxcosita3czxx/mc-pc-ac/python-package.yml?label=dev-builds&logo=python&style=for-the-badge)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/xxcosita3czxx/mc-pc-ac/codeql.yml?label=irus%20check&logo=v&style=for-the-badge)
 
 Minecraft Computer Anticheat tool for basicaly any system and server admins 

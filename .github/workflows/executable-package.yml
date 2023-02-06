@@ -26,14 +26,14 @@ jobs:
             pip install -r non-GUI/reqs.txt
             pip install pyinstaller
           windows: |
-            pip install nuitika
             pip install --upgrade pip
             pip install -r non-GUI/reqs.txt
+            pip install nuitka
       - name: Building files
         uses: knicknic/os-specific-run@v1.0.3
         with:
           linux: pyinstaller --onefile --add-data=non-GUI/mcpcacconfig.py:mcpcacconfig.py -n=mc-pc-ac-${{ matrix.os }}-${{ matrix.architecture }}-${{ matrix.python-version }} non-GUI/mc-pc-ac.py
-          windows: python -m nuitika --help
+          windows: python -m nuitka --help
       - name: Upload Builds as artefact
         uses: actions/upload-artifact@v3
         with:

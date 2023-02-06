@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
-        uses: knicknic/os-specfic-run@v1.0.3
+        uses: knicknic/os-specific-run@v1.0.3
         with:
           linux: |
             apt install nuitika

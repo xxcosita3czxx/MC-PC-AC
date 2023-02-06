@@ -22,16 +22,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install pyinstaller
           pip install -r non-GUI/reqs.txt
-      - name: Build with pyinstaller
-        run: |
-          if [ ${{ matrix.os }} = windows-latest ]
-          then 
+      - name: Building files
+        uses: knicknic/os-specific-run@v1.0.3
+        with:
+          linux: |
             pyinstaller --help
-          elif [ ${{ matrix.os }} = ubuntu-latest ]
-          then
-            pyinstaller --help
-          else
-            echo Unknown error when choosing system; fi
+          windows: pyinstaler --help
       - name: Upload Builds as artefact
         uses: actions/upload-artifact@v3
         with:

@@ -24,9 +24,7 @@ jobs:
           pip install -r non-GUI/reqs.txt
       - name: Build with pyinstaller
         run: |
-          if [ ${{ matrix.os }} = windows-latest ]; then pyinstaller --help; fi
-          elif [ ${{ matrix.os }} = ubuntu-latest ]; then pyinstaller --help; fi
-          else; echo Unknown error when choosing system; fi
+          if [ ${{ matrix.os }} = windows-latest ]; then pyinstaller --help; elif [ ${{ matrix.os }} = ubuntu-latest ]; then pyinstaller --help; else; echo Unknown error when choosing system; fi
       - name: Upload Builds as artefact
         uses: actions/upload-artifact@v3
         with:

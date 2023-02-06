@@ -22,7 +22,6 @@ jobs:
         uses: knicknic/os-specific-run@v1.0.3
         with:
           linux: |
-            apt install nuitika
             pip install --upgrade pip
             pip install -r non-GUI/reqs.txt
             pip install pyinstaller

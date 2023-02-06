@@ -30,7 +30,7 @@ jobs:
       - name: Upload Builds as artefact
         uses: actions/upload-artifact@v3
         with:
-          name: mc-pc-ac-${{ matrix.os }}-${{ matrix.architecture }}-${{ matrix.python-version }}.*
-          path: dist/mc-pc-ac-${{ matrix.os }}-${{ matrix.architecture }}-${{ matrix.python-version }}.*
+          name: mc-pc-ac-${{ matrix.os }}-${{ matrix.architecture }}-${{ matrix.python-version }}**
+          path: dist/mc-pc-ac-${{ matrix.os }}-${{ matrix.architecture }}-${{ matrix.python-version }}**
         # Use always() to always run this step to publish test results when there are test failures
         if: ${{ always() }}

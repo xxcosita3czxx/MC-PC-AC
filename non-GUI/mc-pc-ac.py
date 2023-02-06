@@ -6,16 +6,18 @@ import mcpcacconfig
 from colorama import *
 from sys import argv, exit
 import sys
+import pytest
 cheats = mcpcacconfig.CHEATS
 
 if platform.system() == "Windows":
     import winreg
 else:
     print("Non-Windows operating system detected. Not importing registry dependencies!")
-
+@pytest.mark.reg
 def chck_reg(cheats):
     '''Check in registry (WINDOWS ONLY)'''
     pass
+@pytest.mark.files
 def chck_files(cheats):
     print("Checking whole system")
     '''Will check the whole system drive including .minecraft'''
@@ -53,6 +55,7 @@ def chck_files(cheats):
                 print("Found files:")
                 for file in found:
                     print(file_path)
+@pytest.mark.deleted
 def chck_deleted(cheats):
     if platform.system() == "Linux":
         os.chdir(str(os.environ["HOME"]))
@@ -87,6 +90,7 @@ def chck_logs(cheats):
             print(line)
     # Close the file
     f.close()
+@pytest.mark.auto
 def auto_chck():
     cheats = mcpcacconfig.CHEATS
     chck_reg(cheats)
@@ -95,7 +99,7 @@ def auto_chck():
     chck_minecraft(cheats)
     chck_logs(cheats)
 ## Main
-
+@pytest.mark.main
 @click.command()
 @click.option("--auto", is_flag=True, help="Automaticaly checks in the whole system (Unstable, doesnt really work)")
 @click.option("--files", is_flag=True, help="Will check the whole system drive including .minecraft")

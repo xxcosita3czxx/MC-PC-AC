@@ -29,16 +29,16 @@ jobs:
           windows: |
             pip install --upgrade pip
             pip install -r non-GUI/reqs.txt
-            pip install nuitka
+            pip install nuitka zstandard
       - name: Building files
         uses: knicknic/os-specific-run@v1.0.3
         with:
           linux: pyinstaller --onefile --add-data=non-GUI/mcpcacconfig.py:mcpcacconfig.py -n=mc-pc-ac-${{ matrix.os }}-${{ matrix.architecture }}-${{ matrix.python-version }} non-GUI/mc-pc-ac.py
-          windows: python -m nuitka --onefile --asume-yes-for-downloads --output-filename=mc-pc-ac-${{ matrix.os }}-${{ matrix.architecture }}-${{ matrix.python-version }} --include-data-files=non-GUI/mcpcacconfig.py=mcpcac.py non-GUI/mc-pc-ac.py
+          windows: python -m nuitka --onefile --assume-yes-for-downloads --output-filename=mc-pc-ac-${{ matrix.os }}-${{ matrix.architecture }}-${{ matrix.python-version }} --include-data-files=non-GUI/mcpcacconfig.py=mcpcac.py non-GUI/mc-pc-ac.py
       - name: Upload Builds as artefact
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ matrix.filename }}
+          name: mc-pc-ac-${{ matrix.os }}-${{ matrix.architecture }}-${{ matrix.python-version }}
           path: dist/
         # Use always() to always run this step to publish test results when there are test failures
         if: ${{ always() }}

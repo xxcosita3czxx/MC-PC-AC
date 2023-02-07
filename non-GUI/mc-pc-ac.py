@@ -102,13 +102,6 @@ def chck_logs(cheats):
                             print(line)
                     # Close the file
                     f.close()
-def auto_chck():
-    cheats = mcpcacconfig.CHEATS
-    chck_reg(cheats)
-    chck_files(cheats)
-    chck_deleted(cheats)
-    chck_minecraft(cheats)
-    chck_logs(cheats)
 ## Main
 @click.command()
 @click.option("--auto", is_flag=True, help="Automaticaly checks in the whole system (Unstable, doesnt really work)")
@@ -131,13 +124,12 @@ def main(auto, files, deleted, reg, logs, minecraft):
     elif minecraft:
         chck_minecraft(cheats)
     else:
-        print("Nothing Selected, should i start auto checking?")
+        print("Nothing Selected, should i start auto check for the whole system?")
         sel = input("[Y]es/[N]o >> ")
         if sel == "Y" or sel == "y" or sel == "Yes" or sel == "yes":
-            print("UNSTABLE, USE 'mc-pc-ac --auto' instead")
-            # print("Start auto checking...")
-            # auto_chck()
-        elif sel == "N" or sel == "n" or sel == "No" or sell == "no":
+            chck_files(cheats)
+            
+        elif sel == "n" or sel == "No" or sell == "no":
             print ("nothin hapens, try 'mc-pc-ac --help' ")
         else:
             print(f"wtf wrong with you, you can choose only yes or no, not {sel}")

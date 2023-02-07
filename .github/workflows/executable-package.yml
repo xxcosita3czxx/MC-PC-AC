@@ -28,7 +28,7 @@ jobs:
           windows: |
             pip install --upgrade pip
             pip install -r non-GUI/reqs.txt
-            pip install nuitka zstandard orderedset
+            pip install nuitka zstandard
       - name: Building files
         uses: knicknic/os-specific-run@v1.0.3
         with:

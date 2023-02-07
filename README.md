@@ -47,12 +47,12 @@ If you have any feedback, please reach out me at kokosove18@gmail.com or on disc
 
 - [@xxcosita3czxx](https://www.github.com/xxcosita3cz)
 
-![GitHub](https://img.shields.io/github/license/xxcosita3czxx/mc-pc-ac?logo=github&style=for-the-badge)
-
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/xxcosita3czxx/mc-pc-ac?logo=git&style=for-the-badge)
-
 ## Support
 
 For support, create request on issue page
 
 (Note: if you didnt found something here, you can try checking the [wiki](https://github.com/xxcosita3czxx/mc-pc-ac/wiki) page)
+
+![GitHub](https://img.shields.io/github/license/xxcosita3czxx/mc-pc-ac?logo=github&style=for-the-badge)
+
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/xxcosita3czxx/mc-pc-ac?logo=git&style=for-the-badge)

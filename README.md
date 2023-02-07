@@ -10,7 +10,8 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/xxcosita3czxx/mc-pc-ac?logo=github&style=for-the-badge)
 
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/xxcosita3czxx/mc-pc-ac?include_prereleases&label=Pre-releases&logo=github&style=for-the-badge)
-Minecraft Computer Anticheat tool for basicaly any system and server admins 
+
+## Minecraft Computer Anticheat tool for basicaly any system and server admins 
 
 - by cosita3cz#2095
 

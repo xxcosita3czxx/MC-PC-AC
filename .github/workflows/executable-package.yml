@@ -12,7 +12,6 @@ jobs:
         os: [ubuntu-latest, windows-latest]
         python-version: ["3.7", "3.8", "3.9", "3.10"]
         architcture: ["x86", "x64"]
-        filename: mc-pc-ac-${{ matrix.os }}-${{ matrix.architecture }}-${{ matrix.python-version }}
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
@@ -34,8 +33,8 @@ jobs:
       - name: Building files
         uses: knicknic/os-specific-run@v1.0.3
         with:
-          linux: pyinstaller --onefile --add-data=non-GUI/mcpcacconfig.py:mcpcacconfig.py -n=${{ matrix.filename }} non-GUI/mc-pc-ac.py
-          windows: python -m nuitka --onefile --output-filename=${{ matrix.filename }} --include-data-files=non-GUI/mcpcacconfig.py=mcpcac.py non-GUI/mc-pc-ac.py
+          linux: pyinstaller --onefile --add-data=non-GUI/mcpcacconfig.py:mcpcacconfig.py -n=mc-pc-ac-${{ matrix.os }}-${{ matrix.architecture }}-${{ matrix.python-version }} non-GUI/mc-pc-ac.py
+          windows: python -m nuitka --onefile --output-filename=mc-pc-ac-${{ matrix.os }}-${{ matrix.architecture }}-${{ matrix.python-version }} --include-data-files=non-GUI/mcpcacconfig.py=mcpcac.py non-GUI/mc-pc-ac.py
       - name: Upload Builds as artefact
         uses: actions/upload-artifact@v3
         with:

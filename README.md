@@ -1,5 +1,5 @@
 # MC-PC-AC
-`(IMPORTANT: You will need atleast python3.1 to build the script manually)`
+`(IMPORTANT: You will need atleast python3.6 to build the script manually)`
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/xxcosita3czxx/mc-pc-ac/executable-package.yml?label=dev-builds&logo=python&style=for-the-badge)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/xxcosita3czxx/mc-pc-ac/codeql.yml?label=irus%20check&logo=v&style=for-the-badge)

@@ -3,6 +3,11 @@
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/xxcosita3czxx/mc-pc-ac/executable-package.yml?label=dev-builds&logo=python&style=for-the-badge)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/xxcosita3czxx/mc-pc-ac/codeql.yml?label=irus%20check&logo=v&style=for-the-badge)
+![GitHub all releases](https://img.shields.io/github/downloads/xxcosita3czxx/mc-pc-ac/total?color=green&logo=github&style=for-the-badge)
+
+- Releases:
+
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/xxcosita3czxx/mc-pc-ac?logo=github&style=for-the-badge)
 
 Minecraft Computer Anticheat tool for basicaly any system and server admins 
 

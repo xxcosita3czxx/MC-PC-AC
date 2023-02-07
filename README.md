@@ -11,6 +11,8 @@
 
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/xxcosita3czxx/mc-pc-ac?include_prereleases&label=Pre-releases&logo=github&style=for-the-badge)
 
+[>> Dev auto builds <<]
+
 ## Minecraft Computer Anticheat tool for basicaly any system and server admins 
 
 - by cosita3cz#2095

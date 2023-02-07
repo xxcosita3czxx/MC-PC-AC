@@ -19,7 +19,7 @@ def chck_files(cheats):
     print("Checking whole system")
     '''Will check the whole system drive including .minecraft'''
     if platform.system() == "Windows":
-        print("Checking ALL files, are you sure? (NOTE: this will take a while, and you should NOT close script)")
+        print("Checking ALL files, are you sure? (NOTE: this will take a while(depending on your pc speed), and you should NOT close script)")
         selone=input("[Y]es/[N]o >> ")
         if selone.lower() == "y":
             if platform.system() == "Windows":
@@ -57,9 +57,8 @@ def chck_deleted(cheats):
         os.chdir(str(os.environ["HOME"]))
         rbin=".local/share/Trash/files"
     elif platform.system() == "Windows":
-        rbin="C:/$Recycle"
+        rbin="C:\$Recycle"
     else:
-        print("mac os not support, this command failing")
         sys.exit("001")
     found = []
     names = cheats
@@ -79,13 +78,30 @@ def chck_minecraft(cheats):
     pass
 def chck_logs(cheats):
     print("checking logs...")
-    f = open("log.txt", "r")
-    lines = f.readlines() 
-    for line in lines:
-        if line.find(cheats) != -1:
-            print(line)
-    # Close the file
-    f.close()
+    # Get a list of all the files in the folder
+    files = "%APPDATA%/.minecraft/logs/"
+
+    # Iterate through the list and open each file
+    for root, dirs, files in os.walk(files):
+        for file in files:
+            if file.endswith('.txt'):
+                with open(file) as f:
+                    # Do something with the file
+                    lines = f.readlines() 
+                    for line in lines:
+                        if line.find(cheats) != -1:
+                            print(line)
+                    # Close the file
+                    f.close()
+            if file.endswith(".gz"):
+                with gzip.open(file, 'rb') as f:
+                    # Do something with the file
+                    lines = f.readlines() 
+                    for line in lines:
+                        if line.find(cheats) != -1:
+                            print(line)
+                    # Close the file
+                    f.close()
 def auto_chck():
     cheats = mcpcacconfig.CHEATS
     chck_reg(cheats)
@@ -104,22 +120,16 @@ def auto_chck():
 def main(auto, files, deleted, reg, logs, minecraft):
     if auto:
         auto_chck()
-        sys.exit("000")
     elif files:
         chck_files(cheats)
-        sys.exit("000")
     elif deleted:
         chck_deleted(cheats)
-        sys.exit("000")
     elif reg:
         chck_reg(cheats)
-        sys.exit("000")
     elif logs:
         chck_logs(cheats)
-        sys.exit("000")
     elif minecraft:
         chck_minecraft(cheats)
-        sys.exit("000")
     else:
         print("Nothing Selected, should i start auto checking?")
         sel = input("[Y]es/[N]o >> ")
@@ -129,9 +139,7 @@ def main(auto, files, deleted, reg, logs, minecraft):
             # auto_chck()
         elif sel == "N" or sel == "n" or sel == "No" or sell == "no":
             print ("nothin hapens, try 'mc-pc-ac --help' ")
-            sys.exit("000")
         else:
             print(f"wtf wrong with you, you can choose only yes or no, not {sel}")
-            sys.exit("000")
 if __name__ == "__main__":
     main()

@@ -33,7 +33,7 @@ jobs:
         uses: knicknic/os-specific-run@v1.0.3
         with:
           linux: pyinstaller --onefile --distpath=mc-pc-ac.dist/ --add-data=non-GUI/mcpcasconfig.py:mcpcacconfig.py -n=mc-pc-ac-${{ matrix.os }}-${{ matrix.python-version }} non-GUI/mc-pc-ac.py
-          windows: python -m nuitka  --product-name=mc-pc-ac --copyright="Copyright (c) 2023 cosita3cz" --file-description="Minecraft Computer Antivirus" --disable-console --onefile --assume-yes-for-downloads --output-filename=mc-pc-ac-${{ matrix.os }}-${{ matrix.python-version }} --include-data-files=non-GUI/mcpcacconfig.py=mcpcacconfig.py non-GUI/mc-pc-ac.py
+          windows: python -m nuitka --product-version=1.0.5 --product-name=mc-pc-ac --copyright="Copyright (c) 2023 cosita3cz" --file-description="Minecraft Computer Antivirus" --disable-console --onefile --assume-yes-for-downloads --output-filename=mc-pc-ac-${{ matrix.os }}-${{ matrix.python-version }} --include-data-files=non-GUI/mcpcacconfig.py=mcpcacconfig.py non-GUI/mc-pc-ac.py
       - name: Upload Builds as artefact
         uses: actions/upload-artifact@v3
         with:

@@ -110,9 +110,7 @@ def chck_logs(cheats):
 @click.option("--reg", is_flag=True, help="Check in registry (WINDOWS ONLY)")
 @click.option("--logs", is_flag=True, help="Scans logs for any suspicious things")
 def main(auto, files, deleted, reg, logs, minecraft):
-    if auto:
-        auto_chck()
-    elif files:
+    if files:
         chck_files(cheats)
     elif deleted:
         chck_deleted(cheats)

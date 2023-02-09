@@ -51,6 +51,7 @@ def chck_files(cheats):
             print("Found files:")
             for file in found:
                 print(file_path)
+        waitend = input("press enter to end")
 def chck_deleted(cheats):
     if platform.system() == "Linux":
         os.chdir(str(os.environ["HOME"]))

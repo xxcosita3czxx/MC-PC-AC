@@ -74,13 +74,15 @@ def chck_deleted(cheats):
     print("Found files:")
     for file in found:
         print(file_path)
+    waitend = input("press enter to end")
 def chck_minecraft(cheats):
     pass
 def chck_logs(cheats):
     print("checking logs...")
     # Get a list of all the files in the folder
-
-    files = "%APPDATA%/.minecraft/logs/"
+    if platform.system() == "Windows":
+        os.chdir(str(os.environ("APPDATA")))
+        files = ".minecraft/logs/"
 
     # Iterate through the list and open each file
     for root, dirs, files in os.walk(files):

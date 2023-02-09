@@ -79,6 +79,7 @@ def chck_minecraft(cheats):
 def chck_logs(cheats):
     print("checking logs...")
     # Get a list of all the files in the folder
+
     files = "%APPDATA%/.minecraft/logs/"
 
     # Iterate through the list and open each file
@@ -104,7 +105,6 @@ def chck_logs(cheats):
                     f.close()
 ## Main
 @click.command()
-@click.option("--auto", is_flag=True, help="Automaticaly checks in the whole system (Unstable, doesnt really work)")
 @click.option("--files", is_flag=True, help="Will check the whole system drive including .minecraft")
 @click.option("--deleted", is_flag=True, help="Checks the trash bin")
 @click.option("--minecraft", is_flag=True, help="Deeply check .minecraft folder for files made by cheats")

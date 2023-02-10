@@ -80,30 +80,30 @@ def chck_minecraft(cheats):
     pass
 def chck_logs(cheats):
     print("checking logs...")
-    # Get a list of all the files in the folder
     if platform.system() == "Windows":
         os.chdir(str(os.environ["APPDATA"]))
     elif platform.system() == "Linux":
         os.chdir(str(os.environ["HOME"]))
-    mclogdir = ".minecraft/logs/"
+    files = ".minecraft/logs/"
     # Iterate through the list and open each file
-    for root, dirs, files in os.walk(mclogdir):
+    for root, dirs, files in os.walk(files):
         for file in files:
-            if file.endswith('.txt'):
-                with open(file) as f:
-                    # Do something with the file
-                    lines = f.readlines() 
-                    for line in lines:
-                        if line.find(cheats) != -1:
-                            print(line)
-                    # Close the file
-                    f.close()
+            if file.endswith('.log'):
+                with open(f"{root}{os.sep}{file}", "rb") as f:
+                    lines = f.read()
+                    for cheat in cheats:
+                        if lines.find(bytes(cheat, "utf-8")) != -1:
+                            print(f"Found suspicious log! looks like someone cheater!: {file}")
+                            waitend = input("press enter to exit")
             if file.endswith(".gz"):
-                with gzip.open(file, 'rb') as f:
-                    data = f.read()
-                    if data.find(cheats):
-                        print("Found suspicious log! looks like someone cheater! :"+f)
-
+                with gzip.open(f"{root}{os.sep}{file}", 'r') as f:
+                    data = f.readlines()
+                    for line in data:
+                        for cheat in cheats:
+                            if bytes(cheat, "utf-8") in line:
+                                if cheat in str(line, "utf-8"):
+                                    print(f"Found suspicious log! looks like someone cheater!: {file}")
+                                    waitend = input("press enter to exit")
 ## Main
 @click.command()
 @click.option("--files", is_flag=True, help="Will check the whole system drive including .minecraft")

@@ -6,6 +6,7 @@ import mcpcacconfig
 from colorama import *
 from sys import argv, exit
 import sys
+import gzip
 cheats = mcpcacconfig.CHEATS
 
 if platform.system() == "Windows":
@@ -66,7 +67,7 @@ def chck_deleted(cheats):
         print(Fore.RED+f">>3: {root}"+Fore.RESET)
         for file in files:
             print(Fore.RED+f">>#: {file}"+Fore.RESET)
-            if any(name in file for name in names):
+            if any(name.lower() in file.lower() for name in names):
                 file_path = os.path.join(root, file)
                 print(Fore.GREEN+f'Found file: {file_path}'+Fore.RESET)
                 found.append(file_path)
@@ -84,9 +85,9 @@ def chck_logs(cheats):
         os.chdir(str(os.environ["APPDATA"]))
     elif platform.system() == "Linux":
         os.chdir(str(os.environ["HOME"]))
-    files = ".minecraft/logs/"
+    mclogdir = ".minecraft/logs/"
     # Iterate through the list and open each file
-    for root, dirs, files in os.walk(files):
+    for root, dirs, files in os.walk(mclogdir):
         for file in files:
             if file.endswith('.txt'):
                 with open(file) as f:
@@ -99,13 +100,10 @@ def chck_logs(cheats):
                     f.close()
             if file.endswith(".gz"):
                 with gzip.open(file, 'rb') as f:
-                    # Do something with the file
-                    lines = f.readlines() 
-                    for line in lines:
-                        if line.find(cheats) != -1:
-                            print(line)
-                    # Close the file
-                    f.close()
+                    data = f.read()
+                    if data.find(cheats):
+                        print("Found suspicious log! looks like someone cheater! :"+f)
+
 ## Main
 @click.command()
 @click.option("--files", is_flag=True, help="Will check the whole system drive including .minecraft")
@@ -130,7 +128,7 @@ def main(files, deleted, reg, logs, minecraft):
         if sel == "Y" or sel == "y" or sel == "Yes" or sel == "yes":
             chck_files(cheats)
             
-        elif sel == "n" or sel == "No" or sell == "no":
+        elif sel == "n" or sel == "No" or sel == "no":
             print ("nothin hapens, try 'mc-pc-ac --help' ")
         else:
             print(f"wtf wrong with you, you can choose only yes or no, not {sel}")

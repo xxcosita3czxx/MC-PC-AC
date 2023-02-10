@@ -52,7 +52,9 @@ def chck_files(cheats):
             print("Found files:")
             for file in found:
                 print(file_path)
-        waitend = input("press enter to end")
+        waitend = input("press enter to exit")
+    else:
+        print("Aborting...")
 def chck_deleted(cheats):
     if platform.system() == "Linux":
         os.chdir(str(os.environ["HOME"]))
@@ -75,7 +77,7 @@ def chck_deleted(cheats):
     print("Found files:")
     for file in found:
         print(file_path)
-    waitend = input("press enter to end")
+    waitend = input("press enter to exit")
 def chck_minecraft(cheats):
     pass
 def chck_logs(cheats):

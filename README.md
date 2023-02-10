@@ -32,7 +32,7 @@ This project is used (or will be) by the following servers:
 
 - [Majnrik](https://discord.gg/cXmraC9VWb)
 
-- [TheOver](https://discord.gg/aFEhjJMDN5)
+- [star-box](https://discord.gg/aFEhjJMDN5)
 
 ## Optimizations
 

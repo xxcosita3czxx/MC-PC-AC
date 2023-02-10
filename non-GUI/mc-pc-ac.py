@@ -51,6 +51,7 @@ def chck_files(cheats):
             print("Found files:")
             for file in found:
                 print(file_path)
+        waitend = input("press enter to end")
 def chck_deleted(cheats):
     if platform.system() == "Linux":
         os.chdir(str(os.environ["HOME"]))
@@ -73,13 +74,17 @@ def chck_deleted(cheats):
     print("Found files:")
     for file in found:
         print(file_path)
+    waitend = input("press enter to end")
 def chck_minecraft(cheats):
     pass
 def chck_logs(cheats):
     print("checking logs...")
     # Get a list of all the files in the folder
-    files = "%APPDATA%/.minecraft/logs/"
-
+    if platform.system() == "Windows":
+        os.chdir(str(os.environ["APPDATA"]))
+        files = ".minecraft/logs/"
+    elif platform.system() == "Linux":
+        os.chdir(str(os.environ["HOME"]))
     # Iterate through the list and open each file
     for root, dirs, files in os.walk(files):
         for file in files:
@@ -103,7 +108,6 @@ def chck_logs(cheats):
                     f.close()
 ## Main
 @click.command()
-@click.option("--auto", is_flag=True, help="Automaticaly checks in the whole system (Unstable, doesnt really work)")
 @click.option("--files", is_flag=True, help="Will check the whole system drive including .minecraft")
 @click.option("--deleted", is_flag=True, help="Checks the trash bin")
 @click.option("--minecraft", is_flag=True, help="Deeply check .minecraft folder for files made by cheats")

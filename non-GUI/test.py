@@ -24,7 +24,7 @@ def chck_logs(cheats):
             for file in files:
                 if file.endswith('.txt'):
                     if os.path.exists(file):
-                        with open(file) as f:
+                        with open(file, "rb") as f:
                             # Do something with the file
                             lines = f.readlines() 
                             for line in lines:
@@ -34,7 +34,7 @@ def chck_logs(cheats):
                             f.close()
                 if file.endswith(".gz"):
                     if os.path.exists(f"{root}/{file}"):
-                        with gzip.open(f"{root}/{file}", 'r', 'rb') as f:
+                        with gzip.open(f"{root}/{file}", 'rb') as f:
                             data = f.readlines()
                             for line in data:
                                 for cheat in cheats:

@@ -81,9 +81,10 @@ def chck_logs(cheats):
     print("checking logs...")
     # Get a list of all the files in the folder
     if platform.system() == "Windows":
-        os.chdir(str(os.environ("APPDATA")))
+        os.chdir(str(os.environ["APPDATA"]))
         files = ".minecraft/logs/"
-
+    elif platform.system() == "Linux":
+        os.chdir(str(os.environ["HOME"]))
     # Iterate through the list and open each file
     for root, dirs, files in os.walk(files):
         for file in files:

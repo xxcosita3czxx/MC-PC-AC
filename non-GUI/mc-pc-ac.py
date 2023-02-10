@@ -77,7 +77,8 @@ def chck_deleted(cheats):
     print("Found files:")
     for file in found:
         print(file_path)
-    waitend = input("press enter to exit")
+    input("press enter to exit")
+
 def chck_minecraft(cheats):
     pass
 def chck_logs(cheats):
@@ -96,7 +97,6 @@ def chck_logs(cheats):
                     for cheat in cheats:
                         if lines.find(bytes(cheat, "utf-8")) != -1:
                             print(f"Found suspicious log! looks like someone cheater!: {file}")
-                            waitend = input("press enter to exit")
             if file.endswith(".gz"):
                 with gzip.open(f"{root}{os.sep}{file}", 'r') as f:
                     data = f.readlines()
@@ -105,7 +105,7 @@ def chck_logs(cheats):
                             if bytes(cheat, "utf-8") in line:
                                 if cheat in str(line, "utf-8"):
                                     print(f"Found suspicious log! looks like someone cheater!: {file}")
-                                    waitend = input("press enter to exit")
+    input("press enter to exit")
 ## Main
 @click.command()
 @click.option("--files", is_flag=True, help="Will check the whole system drive including .minecraft")

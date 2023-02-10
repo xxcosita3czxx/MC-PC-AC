@@ -113,7 +113,7 @@ def chck_logs(cheats):
 @click.option("--minecraft", is_flag=True, help="Deeply check .minecraft folder for files made by cheats")
 @click.option("--reg", is_flag=True, help="Check in registry (WINDOWS ONLY)")
 @click.option("--logs", is_flag=True, help="Scans logs for any suspicious things")
-def main(auto, files, deleted, reg, logs, minecraft):
+def main(files, deleted, reg, logs, minecraft):
     if files:
         chck_files(cheats)
     elif deleted:

@@ -15,6 +15,8 @@
 
 `(Note: Only logged in users can download artifacts/dev builds)`
 
+If you got any errors, i would appreciate you tell it in issues page or dming me
+
 [>> Dev auto builds <<](https://github.com/xxcosita3czxx/MC-PC-AC/actions/workflows/executable-package.yml)
 ## Minecraft Computer Anticheat tool for basicaly any system and server admins 
 

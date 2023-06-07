@@ -31,9 +31,9 @@ If you got any errors, i would appreciate you tell it in issues page or dming me
 
 ## Used By
 
-This project is used (or will be) by the following servers:
+This project is used (or was) by the following servers:
 
-- [Majnrik](https://discord.gg/cXmraC9VWb)
+- [Majnrik]( Server Ended )
 
 - [star-box](https://discord.gg/aFEhjJMDN5)
 

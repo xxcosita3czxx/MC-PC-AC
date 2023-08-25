@@ -1,3 +1,6 @@
+WARNING: This project is kinda dead, if you want me to continue it, go and msg me on discord: @cosita3ct
+
+
 # MC-PC-AC
 `(IMPORTANT: You will need atleast python3.6 to build the script manually)`
 

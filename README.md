@@ -1,4 +1,4 @@
-WARNING: This project is kinda dead, if you want me to continue it, go and msg me on discord: @cosita3ct
+WARNING: This project is kinda dead, if you want me to continue it, go and msg me on discord: @cosita3cz
 
 
 # MC-PC-AC

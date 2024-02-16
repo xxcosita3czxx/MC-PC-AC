@@ -14,7 +14,7 @@ WARNING: This project is kinda dead, if you want me to continue it, go and msg m
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/xxcosita3czxx/mc-pc-ac?logo=github&style=for-the-badge)
 
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/xxcosita3czxx/mc-pc-ac?include_prereleases&label=Pre-releases&logo=github&style=for-the-badge)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/xxcosita3czxx/mc-pc-ac?include_prereleases&label=Dev-Builds&logo=github&style=for-the-badge)
 
 `(Note: Only logged in users can download artifacts/dev builds)`
 
@@ -29,14 +29,12 @@ If you got any errors, i would appreciate you tell it in issues page or dming me
 ## Features
 
 - Dark mode only
-- GUI and Non GUI versions
+- --GUI-- and Non GUI versions
 - Cross platform (Not for mac, i will not pay for it)
 
 ## Used By
 
 This project is used (or was) by the following servers:
-
-- [Majnrik]( Server Ended )
 
 - [star-box](https://discord.gg/aFEhjJMDN5)
 

@@ -44,7 +44,7 @@ It could run basicaly on anyhing includin the smart fridge (if needed)
 
 ## Feedback
 
-If you have any feedback, please reach out me at kokosove18@gmail.com or on discord: cosita3cz#2095
+If you have any feedback, please reach out me at cosita3cz@proton.me or on discord: @cosita3cz
 
 ## Roadmap
 

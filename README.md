@@ -1,7 +1,7 @@
 WARNING: This project is kinda dead, if you want me to continue it, go and msg me on discord: @cosita3cz
 
-
 # MC-PC-AC
+
 `(IMPORTANT: You will need atleast python3.6 to build the script manually)`
 
 `(Note: Some antiviruses will tell this is virus, cause i dont have money for signing the file, its false check obviously)`
@@ -22,14 +22,14 @@ WARNING: This project is kinda dead, if you want me to continue it, go and msg m
 
 If you got any errors, i would appreciate you tell it in issues page or dming me
 
-## Minecraft Computer Anticheat tool for basicaly any system and server admins 
+## Minecraft Computer Anticheat tool for basicaly any system and server admins
 
 - by cosita3cz#2095
 
 ## Features
 
 - Dark mode only
-- --GUI-- and Non GUI versions
+- ~~GUI~~ and Non GUI versions
 - Cross platform (Not for mac, i will not pay for it)
 
 ## Used By
@@ -44,7 +44,7 @@ It could run basicaly on anyhing includin the smart fridge (if needed)
 
 ## Feedback
 
-If you have any feedback, please reach out me at cosita3cz@proton.me or on discord: @cosita3cz
+If you have any feedback, please reach out me at <cosita3cz@proton.me> or on discord: @cosita3cz
 
 ## Roadmap
 

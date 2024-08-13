@@ -1,5 +1,5 @@
-CHEATS = ["wurst", 
-          "aristois", 
+CHEATS = ["wurst",
+          "aristois",
           "sigma",
           "vape",
           "guguhack",
@@ -19,5 +19,5 @@ CHEATS = ["wurst",
           "astolfo",
           "inertia",
           "astolfo",
-          "hack"
+          "hack",
      ]

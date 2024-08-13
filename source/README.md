@@ -18,6 +18,7 @@ git clone https://github.com/xxcosita3czxx/mc-pc-ac.git
 ```lua
 cd mc-pc-ac/non-GUI
 ```
+
 - Install requirements ->
 
 ```lua
@@ -34,6 +35,7 @@ python3 mc-pc-ac.py --help
 
 hit the releases button on right and download latest build for your system
 Then you can use the script
+
 ```bash
 mc-pc-ac(strings about version and arch.) --help
 ```
@@ -42,10 +44,10 @@ With Extension ofc (Does not count on Linux)
 
 ## FAQ
 
-#### Is it virus?
+### Is it virus?
 
 No. just no.
 
-#### Antivirus tells me its virus
+### Antivirus tells me its virus
 
 Check it inside virustotal.com, and if says it is virus, then send me the link to virustotal

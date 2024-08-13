@@ -1,0 +1,38 @@
+line-length = 84
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+    "utils/cosita_toolkit.py"
+]
+
+[format]
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+[lint]
+select = ["T20","SIM","PT","PYI","S","E","F","I","COM","UP","PLR2004","C","B","LOG","W"]
+ignore = ["S607","E501"]

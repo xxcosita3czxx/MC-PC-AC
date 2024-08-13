@@ -5,10 +5,32 @@ import platform
 import sys
 
 import click
-import mcpcacconfig
 from colorama import Fore
 
-cheats = mcpcacconfig.CHEATS
+cheats = ["wurst",
+          "aristois",
+          "sigma",
+          "vape",
+          "guguhack",
+          "impact",
+          "xray",
+          "kamiblue",
+          "huzuni",
+          "kami",
+          "nodus",
+          "weepcraft",
+          "cheatbreaker",
+          "cheatengine",
+          "meteor",
+          "bleach",
+          "bleachhack",
+          "phobos",
+          "astolfo",
+          "inertia",
+          "astolfo",
+          "hack",
+]
+
 
 if platform.system() == "Windows":
     pass
@@ -18,8 +40,10 @@ def chck_reg(cheats):
     '''Check in registry (WINDOWS ONLY)'''
     pass
 def chck_files(cheats):
-    logging.info("Checking whole system")
+
     '''Will check the whole system drive including .minecraft'''
+
+    logging.info("Checking whole system")
     logging.info("Checking ALL files, are you sure? (NOTE: this will take a while(depending on your pc speed), and you should NOT close script)")
     selone=input("[Y]es/[N]o >> ")
     if selone.lower() == "y":
@@ -56,12 +80,13 @@ def chck_files(cheats):
         input("press enter to exit")
     else:
         logging.info("Aborting...")
+
 def chck_deleted(cheats):
     if platform.system() == "Linux":
         os.chdir(str(os.environ["HOME"]))
         rbin=".local/share/Trash/files"
     elif platform.system() == "Windows":
-        rbin="C:\$Recycle"
+        rbin=r"C:\$Recycle"
     else:
         sys.exit("001")
     found = []
@@ -82,13 +107,18 @@ def chck_deleted(cheats):
 
 def chck_minecraft(cheats):
     pass
+
 def chck_logs(cheats):
+
     logging.info("checking logs...")
+
     if platform.system() == "Windows":
         os.chdir(str(os.environ["APPDATA"]))
+
     elif platform.system() == "Linux":
         os.chdir(str(os.environ["HOME"]))
     files = ".minecraft/logs/"
+
     # Iterate through the list and open each file
     for root, dirs, files in os.walk(files):
         for file in files:
@@ -97,15 +127,19 @@ def chck_logs(cheats):
                     lines = f.read()
                     for cheat in cheats:
                         if lines.find(bytes(cheat, "utf-8")) != -1:
+
                             logging.info(f"Found suspicious log! looks like someone cheater!: {file}")
+
             if file.endswith(".gz"):
                 with gzip.open(f"{root}{os.sep}{file}", 'r') as f:
                     data = f.readlines()
+
                     for line in data:
                         for cheat in cheats:
-                            if bytes(cheat, "utf-8") in line:
-                                if cheat in str(line, "utf-8"):
-                                    logging.info(f"Found suspicious log! looks like someone cheater!: {file}")
+                            if bytes(cheat, "utf-8") in line and cheat in str(line, "utf-8"):
+
+                                logging.info(f"Found suspicious log! looks like someone cheater!: {file}")
+
     input("press enter to exit")
 ## Main
 @click.command()
